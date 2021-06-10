@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <img src="./images/logo.svg" id="logo" alt="logo" class="logo">
+    <img src="./images/logo-bonus.svg" alt="logo" id="logo_bonus" class="logo_bonus display__none">
+    <div class="header_box">
+      <p class="header_score">SCORE</p>
+      <span id="points" class="header_score-points">
+      </span>
+    </div>
+  </header>
+
+  <section id="main" class="main">
+    <img src="./images/bg-triangle.svg" alt="triangule">
+    <div id="paper" class="pad pad_blue main_blue">
+      <div class="pad-intern">
+        <img src="/images/icon-paper.svg" alt="">
+      </div>
+    </div>
+    <div id="scissors" class="pad pad_yellow main_yellow">
+      <div class="pad-intern">
+        <img src="/images/icon-scissors.svg" alt="">
+      </div>
+    </div>
+    <div id="rock" class="pad pad_red main_red">
+      <div class="pad-intern">
+        <img src="./images/icon-rock.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section id="main__bonus" class="main__bonus display__none">
+    <img class="pentagono" src="./images/bg-pentagon.svg" alt="">
+    <div id="paper_bonus" class="pad_bonus pad_blue bonus_blue">
+      <div class="bonus-intern">
+        <img src="./images/icon-paper.svg" alt="">
+      </div>
+    </div>
+    <div id="scissors_bonus" class="pad_bonus pad_yellow bonus_yellow">
+      <div class="bonus-intern">
+        <img src="./images/icon-scissors.svg" alt="">
+      </div>
+    </div>
+    <div id="rock_bonus" class="pad_bonus pad_red bonus_red">
+      <div class="bonus-intern">
+        <img src="./images/icon-rock.svg" alt="">
+      </div>
+    </div>
+    <div id="spock" class="pad_bonus pad_green bonus_green">
+      <div class="bonus-intern">
+        <img src="./images/icon-spock.svg" alt="">
+      </div>
+    </div>
+    <div id="lizard" class="pad_bonus pad_purple bonus_purple">
+      <div class="bonus-intern">
+        <img src="./images/icon-lizard.svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section id="combat" class="combat display__none">
+    <div class="combat-firstline">
+      <div class="combat_box">
+        <div class="combat_box-pad">
+          <div id="pick_blue" class="pad pad_blue combat_blue display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-paper.svg" alt="">
+            </div>
+          </div>
+          <div id="pick_yellow" class="pad pad_yellow combat_yellow display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-scissors.svg" alt="">
+            </div>
+          </div>
+          <div id="pick_red" class="pad pad_red combat_red display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-rock.svg" alt="">
+            </div>
+          </div>
+          <div id="pick_green" class="pad pad_green combat_green display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-spock.svg" alt="">
+            </div>
+          </div>
+          <div id="pick_purple" class="pad pad_purple combat_purple display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-lizard.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <p>YOU PICKED</p>
+      </div>
+      <div class="combat_box">
+        <div class="combat_box-pad">
+          <div id="right_blue" class="pad pad_blue right_blue display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-paper.svg" alt="">
+            </div>
+          </div>
+          <div id="right_yellow" class="pad pad_yellow right_yellow display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-scissors.svg" alt="">
+            </div>
+          </div>
+          <div id="right_red" class="pad pad_red right_red display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-rock.svg" alt="">
+            </div>
+          </div>
+          <div id="right_green" class="pad pad_green right_green display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-spock.svg" alt="">
+            </div>
+          </div>
+          <div id="right_purple" class="pad pad_purple right_purple display__none">
+            <div class="pad-intern">
+              <img src="./images/icon-lizard.svg" alt="">
+            </div>
+          </div>
+        </div>
+        <p>THE HOUSE PICKED</p>
+      </div>
+    </div>
+    <div class="combat-secondline">
+      <p id="result"></p>
+      <button id="play-again" class="play-again">PLAY AGAIN</button>
+    </div>
+  </section>
+
+  <button class="rules" id="rules">RULES</button>
+  <button class="rules bonus" id="bonus">BONUS</button>
+  <button class="rules normal display__none" id="normal">NORMAL</button>
+  <div class="dark display__none" id="dark">
+    <div class="rules__contain">
+      <div class="text__contain">
+        <p class="rules__text">RULES</p>
+        <img class="cruz__desktop display__none" id="cruz__desktop" src="./images/icon-close.svg" alt="">
+      </div>
+      <img id="rules__img" class="rules__img" src="./images/image-rules.svg" alt="">
+      <img id="bonus__img" class="display__none" src="./images/image-rules-bonus.svg" alt="">
+      <img id="cruz" class="cruz" src="./images/icon-close.svg" alt="">
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
